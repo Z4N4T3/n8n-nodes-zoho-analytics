@@ -1,8 +1,8 @@
 # @palpateam/n8n-nodes-zoho-analytics
 
 ![n8n Community Node](https://img.shields.io/badge/n8n-community%20node-ff6d5a)
-![License](https://img.shields.io/npm/l/@palpateam/zoho-analytics)
-![Version](https://img.shields.io/npm/v/@palpateam/zoho-analytics)
+![License](https://img.shields.io/npm/l/@palpateam/n8n-nodes-zoho-analytics)
+![Version](https://img.shields.io/npm/v/@palpateam/n8n-nodes-zoho-analytics)
 
 This is an n8n community node for **Zoho Analytics API v2**. It lets you interact with your Zoho Analytics data directly from your n8n workflows — add rows, import/export data, create tables, and more.
 

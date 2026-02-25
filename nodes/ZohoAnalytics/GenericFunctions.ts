@@ -14,9 +14,10 @@ export async function zohoApiRequest(
 	isFormData: boolean = false
 ): Promise<any> {
 	const credentials = await this.getCredentials('zohoAnalyticsOAuth2Api');
-	const baseUrl = credentials.url as string;
-	// Zoho Analytics API uses analyticsapi.zoho.{eu|com|in...}
-	const apiDomain = baseUrl.replace('accounts.', 'analyticsapi.');
+	
+	// Construct API domain directly from environment to be more robust during automated runs
+	const environment = credentials.environment as string || 'eu';
+	const apiDomain = `https://analyticsapi.zoho.${environment}`;
 
 	const path = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
 

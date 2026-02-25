@@ -7,9 +7,9 @@ exports.getViews = getViews;
 exports.getColumns = getColumns;
 async function zohoApiRequest(method, endpoint, qs = {}, body = {}, orgId, isFormData = false) {
     const credentials = await this.getCredentials('zohoAnalyticsOAuth2Api');
-    const baseUrl = credentials.url;
-    // Zoho Analytics API uses analyticsapi.zoho.{eu|com|in...}
-    const apiDomain = baseUrl.replace('accounts.', 'analyticsapi.');
+    // Construct API domain directly from environment to be more robust during automated runs
+    const environment = credentials.environment || 'eu';
+    const apiDomain = `https://analyticsapi.zoho.${environment}`;
     const path = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
     const headers = {};
     if (orgId) {
