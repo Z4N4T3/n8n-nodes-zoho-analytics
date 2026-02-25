@@ -312,10 +312,10 @@ class ZohoAnalytics {
         };
         this.methods = {
             loadOptions: {
-                getOrganisations: require('./GenericFunctions').getOrganisations,
-                getWorkspaces: require('./GenericFunctions').getWorkspaces,
-                getViews: require('./GenericFunctions').getViews,
-                getColumns: require('./GenericFunctions').getColumns,
+                getOrganisations: GenericFunctions_1.getOrganisations,
+                getWorkspaces: GenericFunctions_1.getWorkspaces,
+                getViews: GenericFunctions_1.getViews,
+                getColumns: GenericFunctions_1.getColumns,
             },
         };
     }
