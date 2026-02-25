@@ -7,7 +7,7 @@ import {
 	NodeOperationError,
 } from 'n8n-workflow';
 
-import { zohoApiRequest } from './GenericFunctions';
+import { zohoApiRequest, getOrganisations, getWorkspaces, getViews, getColumns } from './GenericFunctions';
 
 export class ZohoAnalytics implements INodeType {
 	description: INodeTypeDescription = {
@@ -323,10 +323,10 @@ export class ZohoAnalytics implements INodeType {
 
 	methods = {
 		loadOptions: {
-			getOrganisations: require('./GenericFunctions').getOrganisations,
-			getWorkspaces: require('./GenericFunctions').getWorkspaces,
-			getViews: require('./GenericFunctions').getViews,
-			getColumns: require('./GenericFunctions').getColumns,
+			getOrganisations,
+			getWorkspaces,
+			getViews,
+			getColumns,
 		},
 	};
 
