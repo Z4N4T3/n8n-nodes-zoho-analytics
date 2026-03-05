@@ -1,5 +1,5 @@
 {
-  "name": "@palpateam/n8n-nodes-zoho-analytics",
+  "name": "@z4n4t3/n8n-nodes-zoho-analytics",
   "version": "1.0.2",
   "description": "Community n8n node for Zoho Analytics API v2",
   "keywords": [
