@@ -38,7 +38,7 @@ class ZohoAnalyticsOAuth2Api {
                 displayName: 'Auth URI Query Parameters',
                 name: 'authQueryParameters',
                 type: 'hidden',
-                default: 'access_type=offline&prompt=consent',
+                default: 'access_type=offline',
             },
             {
                 displayName: 'Authentication',
